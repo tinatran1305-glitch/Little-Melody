@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Little Melody – Sing, Play & Learn! | Trò chơi tiếng Anh mầm non 3-4 tuổi</title>
+  <meta name="description" content="Little Melody là trò chơi giáo dục âm nhạc tương tác dành cho trẻ 3-4 tuổi, giúp bé làm quen từ vựng tiếng Anh qua hình ảnh, giai điệu và vận động cùng Rồng Con.">
+  <meta name="theme-color" content="#48DBFB">
+
+  <!-- Google Fonts: Fredoka & Quicksand -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Decorative Clouds for Desktop/Tablet Viewport Framing -->
+  <div class="bg-cloud cloud-1">☁️</div>
+  <div class="bg-cloud cloud-2">⛅</div>
+  <div class="bg-cloud cloud-3">☁️</div>
+
+  <!-- Safe Mobile/Tablet Viewport Canvas -->
+  <main class="app-viewport" id="app-viewport">
+    
+    <!-- App Universal Header -->
+    <header class="app-header" id="app-header">
+      <button class="header-btn back-btn" id="global-back-btn" title="Quay lại" style="visibility: hidden;">
+        ◀
+      </button>
+
+      <div class="header-logo-group">
+        <span class="header-logo-icon">🎵</span>
+        <span class="header-logo-title">Little Melody</span>
+      </div>
+
+      <div style="display: flex; gap: 8px;">
+        <button class="header-btn sound-btn" id="global-sound-toggle" title="Bật/Tắt âm thanh">
+          🔊
+        </button>
+        <button class="header-btn parent-btn" id="global-parent-btn" title="Góc Phụ Huynh">
+          ⚙️
+        </button>
+      </div>
+    </header>
+
+    <!-- Mascot Stage (Top Area) -->
+    <section class="mascot-stage" id="mascot-mount-point"></section>
+
+    <!-- Main Dynamic Screen Container -->
+    <section class="main-screen-container" id="screen-container"></section>
+
+    <!-- Modal Mount Point (Parental Gate & Dashboard) -->
+    <div id="modal-mount-point"></div>
+
+    <!-- First Audio Unlock Modal (Required for Mobile Autoplay Policy) -->
+    <div class="audio-unlock-overlay" id="audio-unlock-modal">
+      <div class="audio-unlock-card">
+        <div class="unlock-dragon-icon">🐲✨</div>
+        <h2 class="unlock-title">Chào mừng bé yêu!</h2>
+        <p class="unlock-sub">Chạm vào màn hình để bắt đầu chuyến phiêu lưu âm nhạc cùng Rồng Con nhé!</p>
+        <div class="unlock-tap-pill">👉 Chạm để chơi ngay! 👈</div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Application Logic Modules -->
+  <script src="js/audio.js"></script>
+  <script src="js/mascot.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/lessonsData.js"></script>
+  <script src="js/minigames.js"></script>
+  <script src="js/parentZone.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
