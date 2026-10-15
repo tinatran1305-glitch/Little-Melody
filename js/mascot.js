@@ -195,7 +195,7 @@ class DragonMascot {
     const svg = this.container ? this.container.querySelector('.dragon-svg') : null;
     if (!svg) return;
 
-    svg.className = `dragon-svg mood-${mood}`;
+    svg.setAttribute('class', `dragon-svg mood-${mood}`);
 
     const eyeOpen = svg.querySelector('.eye-open');
     const eyeHappy = svg.querySelector('.eye-happy');
